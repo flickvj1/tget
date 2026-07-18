@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Starbucks Reward – Claim Now</title>
+    <title>Target Reward – Claim Now</title>
     <meta name="robots" content="noindex, nofollow">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
-            /* Starbucks Branded Colors olobomi */
-            --brand: #00704A;
-            --brand-dark: #005A3B;
-            --brand-light: #D4E9E2;
+            /* Target Branded Colors */
+            --brand: #cc0000;
+            --brand-dark: #aa0000;
+            --brand-light: #fce8e8;
             
             --text: #111111;
             --text-mid: #4a5568;
@@ -92,7 +93,6 @@
             padding-bottom: 1.5vh; 
         }
         .v-logo { 
-            /* Slightly larger height for the circular Starbucks logo */
             height: clamp(28px, 5vh, 40px); 
             object-fit: contain; 
         }
@@ -209,7 +209,7 @@
             background: var(--brand); 
             border-color: var(--brand); 
             color: #fff; 
-            box-shadow: 0 2px 8px rgba(0, 112, 74, 0.3); 
+            box-shadow: 0 2px 8px rgba(204, 0, 0, 0.3); 
         }
         .s-txt { 
             font-size: clamp(0.75rem, 1.6vh, 0.85rem); 
@@ -235,7 +235,7 @@
             justify-content: center; 
             position: relative; 
             transition: 0.2s; 
-            box-shadow: 0 4px 15px rgba(0, 112, 74, 0.25); 
+            box-shadow: 0 4px 15px rgba(204, 0, 0, 0.25); 
             min-height: clamp(50px, 7vh, 60px); 
             margin-bottom: 8px; 
         }
@@ -264,7 +264,8 @@
             
             <div class="voucher">
                 <div class="v-top">
-                    <img src="https://upload.wikimedia.org/wikipedia/sco/d/d3/Starbucks_Corporation_Logo_2011.svg" alt="Starbucks Logo" class="v-logo">
+                    <!-- Updated Target Logo -->
+                    <img src="https://www.pngall.com/wp-content/uploads/13/Target-Logo-PNG-HD-Image.png" alt="Target Logo" class="v-logo">
                     <div class="v-badge">Reward</div>
                 </div>
                 <div class="v-mid">
@@ -301,7 +302,7 @@
             claimBtn.classList.add('loading');
             setTimeout(() => {
                 // Updated Affiliate Link
-                window.location.href = 'https://linkthem.net/aff_c?offer_id=1741&aff_id=171242';
+                window.location.href = 'https://trksy.org/aff_c?offer_id=1178&aff_id=171242';
             }, 800);
         });
     })();
