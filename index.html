@@ -1,221 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Foot Locker $500 Reward - Premium Deals</title>
-    <meta name="description"
-        content="Claim your $500 Foot Locker reward today. Valid on all Nike merchandise including sneakers, apparel, and backpacks.">
-
-    <!-- Seamless Geo-Redirection Script -->
-    <style id="geo-cloak">
-        /* Completely hides the page content until the country is verified */
-        body {
-            opacity: 0 !important;
-            visibility: hidden !important;
-            background-color: #F4F7FA !important;
-        }
-    </style>
-    <script>
-        (function () {
-            var allowedCountries = ['US', 'CA', 'AU'];
-            var redirectUrl = '/en';
-
-            // Ultra-fast client-side IP check
-            fetch('https://get.geojs.io/v1/ip/country.json')
-                .then(function (res) { return res.json(); })
-                .then(function (data) {
-                    if (data && data.country && allowedCountries.indexOf(data.country) !== -1) {
-                        // User is in US, CA, or AU -> Uncloak the page
-                        var cloak = document.getElementById('geo-cloak');
-                        if (cloak) cloak.remove();
-                    } else {
-                        // User is outside the 3 countries -> Redirect instantly without keeping history
-                        window.location.replace(redirectUrl);
-                    }
-                })
-                .catch(function () {
-                    // Fallback: If API is blocked by adblockers, reveal page so we don't lose traffic
-                    var cloak = document.getElementById('geo-cloak');
-                    if (cloak) cloak.remove();
-                });
-        })();
-    </script>
-
-    <!-- Tailwind CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Promo Code - Unlock Your Discount</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         body {
-            background-color: #F4F7FA;
-            -webkit-font-smoothing: antialiased;
-            overflow: hidden;
-            height: 100dvh;
             font-family: 'Inter', sans-serif;
-            color: #1e293b;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .promo-container {
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            max-width: 480px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nike-logo {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 24px auto;
+            display: block;
+        }
+
+        .offer-tag {
+            background-color: #ff5e00;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .reveal-button {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 16px 32px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reveal-button:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .reveal-button:active {
+            transform: translateY(0);
+        }
+
+        .code-box {
+            display: none;
+            background-color: #f3f4f6;
+            border: 2px dashed #ccc;
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 24px;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .code-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: 2px;
+            font-family: monospace;
+            margin-bottom: 12px;
+        }
+
+        .copy-button {
+            background-color: transparent;
+            color: #111;
+            border: 1px solid #111;
+            border-radius: 20px;
+            padding: 8px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-button:hover {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .terms {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 24px;
+            line-height: 1.4;
+        }
+
+        .urgency {
+            color: #e53e3e;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Confetti effect placeholder */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #111;
+            opacity: 0;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: bottom 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
-        /* Subtle Foot Locker referee stripe pattern for the reward card */
-        .stripe-pattern {
-            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 10px, transparent 10px, transparent 20px);
+        .toast.show {
+            bottom: 30px;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 32px 24px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        /* Loading Spinner */
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #111;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        /* Captcha Container */
+        #captchaContainer {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #111;
         }
     </style>
 </head>
+<body>
 
-<body class="h-[100dvh] w-full overflow-hidden">
-    <div class="w-full max-w-md mx-auto px-5 h-full flex flex-col justify-between py-4">
+    <div class="promo-container">
+        <!-- Nike Swoosh Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1920px-Logo_NIKE.svg.png" alt="Nike Logo" class="nike-logo">
 
-        <!-- Logo & Title Section -->
-        <div class="flex flex-col items-center justify-center shrink-0 mt-1">
-            <div class="w-16 h-16 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center mb-2 p-2">
-                <img src="https://images.seeklogo.com/logo-png/5/1/foot-locker-logo-png_seeklogo-56477.png" 
-                     alt="Foot Locker" 
-                     class="w-full h-full object-contain">
-            </div>
-            <h1 class="text-xl font-extrabold text-slate-900 tracking-tight text-center leading-tight">
-                Foot Locker Reward
-            </h1>
-        </div>
+        <div class="offer-tag">Exclusive Offer</div>
 
-        <!-- Dynamic Reward Card ($500) -->
-        <div class="rounded-xl p-5 shadow-lg shrink-0 relative overflow-hidden flex justify-between items-center text-white bg-[#111111]">
-            <div class="absolute inset-0 stripe-pattern pointer-events-none"></div>
-            <div class="absolute -right-8 -top-8 w-28 h-28 bg-white opacity-5 rounded-full pointer-events-none"></div>
+        <h1 class="main-title">90% OFF</h1>
+        
+        <p class="subtitle">Gear up for the season. Unlock your exclusive Back to School discount code for select styles at Nike.</p>
 
-            <div class="relative z-10">
-                <div class="text-4xl font-extrabold tracking-tight mb-0.5 leading-none drop-shadow-md">
-                    $500
-                </div>
-                <div class="font-bold text-[10px] uppercase tracking-widest text-slate-400 mt-1.5">
-                    Reward Value
-                </div>
-            </div>
-            <div class="relative z-10 bg-white/10 p-3 rounded-full backdrop-blur-md shadow-sm border border-white/20">
-                <i data-lucide="gift" class="w-6 h-6 text-white"></i>
-            </div>
-        </div>
+        <!-- Initial Button to Reveal Code -->
+        <button id="revealBtn" class="reveal-button">
+            <i class="fa-solid fa-gift"></i> Reveal Promo Code
+        </button>
 
-        <!-- Important Nike Notice Box (Simplified) -->
-        <div class="bg-red-50 border border-red-100 p-3 rounded-lg flex items-center gap-3 shrink-0">
-            <div class="bg-red-600 text-white p-1.5 rounded-full shrink-0 shadow-sm">
-                <i data-lucide="tag" class="w-4 h-4"></i>
-            </div>
-            <p class="text-slate-800 text-[12px] leading-tight font-medium">
-                Valid on all <span class="font-bold text-slate-900">Nike merchandise</span> (sneakers, apparel, backpacks).
-            </p>
-        </div>
-
-        <!-- Application Process / Steps -->
-        <div class="flex-grow flex flex-col justify-center py-1">
-            <h2 class="text-slate-900 font-extrabold mb-2.5 text-sm tracking-tight text-center">
-                How to claim your reward:
-            </h2>
-
-            <div class="space-y-2">
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 items-center">
-                    <div class="w-7 h-7 shrink-0 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-xs shadow-inner">1</div>
-                    <div class="font-bold text-slate-800 text-xs">Click the Claim button below</div>
-                </div>
-
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 items-center">
-                    <div class="w-7 h-7 shrink-0 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-xs shadow-inner">2</div>
-                    <div class="font-bold text-slate-800 text-xs">Enter your email & basic info</div>
-                </div>
-
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 items-center">
-                    <div class="w-7 h-7 shrink-0 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-xs shadow-inner">3</div>
-                    <div class="font-bold text-slate-800 text-xs">Complete 4 to 5 required deals</div>
-                </div>
-
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 items-center">
-                    <div class="w-7 h-7 shrink-0 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-xs shadow-inner">4</div>
-                    <div class="font-bold text-slate-800 text-xs">Receive your reward once verified</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom CTA Area -->
-        <div class="w-full shrink-0 pb-1">
-            <button id="startBtn"
-                class="w-full bg-[#E31837] text-white rounded-xl py-3.5 font-extrabold text-[1.05rem] shadow-lg shadow-red-500/30 transition-transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 relative cursor-pointer">
-                <span id="btnText" class="flex items-center gap-2 transition-opacity duration-200">
-                    Claim Reward
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </span>
-                <i id="btnSpinner" data-lucide="loader-2"
-                    class="w-6 h-6 animate-spin absolute opacity-0 transition-opacity duration-200 pointer-events-none"></i>
+        <!-- Hidden Code Box (Revealed on click) -->
+        <div id="codeBox" class="code-box">
+            <div class="text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Your Code:</div>
+            <div id="promoCode" class="code-text">BTS25NIKE</div>
+            <button id="copyBtn" class="copy-button">
+                <i class="fa-regular fa-copy"></i> Copy Code
             </button>
+            <div class="mt-4">
+                <a href="https://www.nike.com" target="_blank" class="text-blue-600 font-semibold text-sm hover:underline">Shop Now at Nike.com <i class="fa-solid fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
 
-            <p class="text-center text-[10px] font-bold text-slate-400 mt-2.5 uppercase tracking-wider">
-                Available in US, CA, AU
-            </p>
+        <div class="urgency">
+            <i class="fa-regular fa-clock"></i> Hurry! Offer expires July 23rd, 2026.
+        </div>
+
+        <p class="terms">
+            *Exclusions apply. Valid on eligible Nike products. Cannot be combined with other offers.
+        </p>
+    </div>
+
+    <!-- Captcha Modal -->
+    <div id="captchaModal" class="modal-overlay">
+        <div class="modal-content">
+            <!-- Loading State -->
+            <div id="loadingState" class="loader-container">
+                <div class="spinner"></div>
+                <div class="loading-text">Generating your exclusive promo code...</div>
+                <p class="text-sm text-gray-500 mt-2">Please wait a moment.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Application Logic -->
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Code copied to clipboard!</div>
+
     <script>
-        // Set the destination tracking link provided
-        const targetUrl = 'https://trksy.org/aff_c?offer_id=1727&aff_id=171242&source=wahatope';
-        const startBtn = document.getElementById('startBtn');
-
-        // Handles the loading state animation on the button
-        function setLoadingState(isLoading) {
-            const dynBtnText = document.getElementById('btnText');
-            const dynBtnSpinner = document.getElementById('btnSpinner');
-
-            if (!dynBtnText || !dynBtnSpinner) return;
-
-            if (isLoading) {
-                dynBtnText.classList.add('opacity-0');
-                dynBtnSpinner.classList.remove('opacity-0');
-                startBtn.classList.add('pointer-events-none');
-            } else {
-                dynBtnText.classList.remove('opacity-0');
-                dynBtnSpinner.classList.add('opacity-0');
-                startBtn.classList.remove('pointer-events-none');
-            }
-        }
-
-        // Button Click Handler
-        startBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            setLoadingState(true);
-
-            // Brief delay for UX, then redirect
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 200);
-
-            // Safety fallback: reset button after 2.5 seconds if the page doesn't unload
-            setTimeout(() => {
-                setLoadingState(false);
-            }, 2500);
-        });
-
-        // Reset button state cleanly if the user navigates back using browser history
-        window.addEventListener('pageshow', (event) => {
-            if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-                setLoadingState(false);
-            }
-        });
-
-        // Bulletproof back-button reset using the Page Visibility API
-        document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === 'visible') {
-                setLoadingState(false);
-            }
-        });
-
-        // Initialize Icons
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
+            const revealBtn = document.getElementById('revealBtn');
+            const codeBox = document.getElementById('codeBox');
+            const copyBtn = document.getElementById('copyBtn');
+            const promoCodeElement = document.getElementById('promoCode');
+            const toast = document.getElementById('toast');
+            
+            // Modal Elements
+            const captchaModal = document.getElementById('captchaModal');
+            const loadingState = document.getElementById('loadingState');
+
+            // Handle Reveal Button Click
+            revealBtn.addEventListener('click', () => {
+                // Show modal with loading state
+                captchaModal.classList.add('active');
+                loadingState.style.display = 'flex';
+
+                // Simulate loading delay (2.5 seconds) then redirect
+                setTimeout(() => {
+                    window.location.href = 'https://appsave.store/cl/i/4orn75';
+                }, 2500);
+            });
+
+            // Handle Copy Button Click
+            copyBtn.addEventListener('click', () => {
+                const codeToCopy = promoCodeElement.innerText;
+                
+                // Try modern clipboard API first
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(codeToCopy).then(() => {
+                        showToast();
+                        updateCopyButton();
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        fallbackCopyTextToClipboard(codeToCopy);
+                    });
+                } else {
+                    // Fallback for iFrames or older browsers
+                    fallbackCopyTextToClipboard(codeToCopy);
+                }
+            });
+
+            function fallbackCopyTextToClipboard(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                
+                // Avoid scrolling to bottom
+                textArea.style.top = "0";
+                textArea.style.left = "0";
+                textArea.style.position = "fixed";
+
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+                    if(successful) {
+                        showToast();
+                        updateCopyButton();
+                    }
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+
+                document.body.removeChild(textArea);
+            }
+
+            function updateCopyButton() {
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                copyBtn.style.backgroundColor = '#111';
+                copyBtn.style.color = '#fff';
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                    copyBtn.style.backgroundColor = 'transparent';
+                    copyBtn.style.color = '#111';
+                }, 2000);
+            }
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            // Simple Confetti Effect Function
+            function createConfetti() {
+                const colors = ['#111', '#ff5e00', '#cccccc'];
+                const container = document.querySelector('.promo-container');
+                
+                for (let i = 0; i < 30; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.classList.add('confetti');
+                    
+                    // Randomize position, color, and animation
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    const left = Math.random() * 100;
+                    const animationDuration = Math.random() * 1 + 0.5;
+                    
+                    confetti.style.backgroundColor = color;
+                    confetti.style.left = left + '%';
+                    confetti.style.top = '50%';
+                    
+                    // Set custom animation using Web Animations API
+                    const animation = confetti.animate([
+                        { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
+                        { transform: `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200 - 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                    ], {
+                        duration: animationDuration * 1000,
+                        easing: 'cubic-bezier(.37,0,.63,1)',
+                        fill: 'forwards'
+                    });
+
+                    container.appendChild(confetti);
+
+                    // Clean up DOM
+                    animation.onfinish = () => {
+                        confetti.remove();
+                    };
+                }
+            }
         });
     </script>
 </body>
-
 </html>
