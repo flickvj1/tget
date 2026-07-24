@@ -281,12 +281,40 @@
             line-height: 1.4;
         }
         .note strong { color: var(--text-mid); }
+
+        /* ── TOP NOTIFICATION ── */
+        .top-notice {
+            background: #fff;
+            border: 1px solid var(--border);
+            color: var(--text-mid);
+            font-size: clamp(0.75rem, 1.5vh, 0.85rem);
+            padding: 8px 16px;
+            border-radius: 100px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            font-weight: 500;
+            animation: slideDown 0.4s ease-out;
+        }
+        .top-notice strong {
+            color: var(--brand-dark);
+            font-weight: 700;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
     <div class="page">
         <div class="container">
             
+            <div class="top-notice">
+                🎉 Good news! You actually qualified for the <strong>$750 Back-to-School Fund</strong> instead.
+            </div>
+
             <div class="voucher">
                 <div class="v-top">
                     <!-- Updated General Back to School Header -->
